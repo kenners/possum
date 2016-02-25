@@ -67,13 +67,13 @@ angular.module('Possum', ['ionic'])
       name: 'No failure',
       value: 1
     }, {
-      name: 'Diuretic, digoxin, antianginal, or hypertensive therapy',
+      name: 'Diuretic, digoxin, antianginal, or antihypertensives',
       value: 2
     }, {
-      name: 'Peripheral oedema, warfarin therapy or borderline cardiomegaly',
+      name: 'Oedema, warfarin, or borderline cardiomegaly',
       value: 4
     }, {
-      name: 'Raised JVP or cardiomega1y',
+      name: 'Raised JVP or cardiomegaly',
       value: 8
     }]
   };
@@ -104,7 +104,7 @@ angular.module('Possum', ['ionic'])
       name: 'AF (rate 60 – 90)',
       value: 4
     }, {
-      name: 'Any other abnormal rhythm, Q or ST/T wave changes',
+      name: 'Any other abnormality',
       value: 8
     }, ]
   };
@@ -313,7 +313,7 @@ angular.module('Possum', ['ionic'])
       {name: 'None', value: 1},
       {name: 'Minor (serous fluid)', value: 2},
       {name: 'Local pus', value: 4},
-      {name: 'Free bowel content, pus or blood', value: 8}
+      {name: 'Bowel content, pus or blood', value: 8}
     ]
   };
 
