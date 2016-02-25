@@ -313,7 +313,7 @@ angular.module('Possum', ['ionic'])
       {name: 'None', value: 1},
       {name: 'Minor (serous fluid)', value: 2},
       {name: 'Local pus', value: 4},
-      {name: 'Bowel content, pus or blood', value: 8}
+      {name: 'Free bowel content, pus or blood', value: 8}
     ]
   };
 
