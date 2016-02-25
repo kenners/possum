@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src='js/bignumber.min.js'></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="Possum" ng-controller="PossumCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-assertive">
+        <h1 class="title">P-POSSUM</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div class="card row-center">
+          <div class="item item-divider item-assertive text-center">
+            Predicted Mortality
+          </div>
+          <div class="item item-text-wrap text-center">
+            <h1>{{mortality(physScore(age, cardiac, resp, ecg, hr, sbp, gcs, hb, wbc, ur, na, k), opScore(sev, procs, bld, soil, malig, urg))}} <small>%</small></h1>
+          </div>
+        </div>
+        <div class="list">
+          <div class="item item-divider">Physiological Factors</div>
+          <label class="item item-input item-select">
+            <div class="input-label">Age</div>
+            <select ng-model="age" ng-init="age = ageOpts.options[0]" ng-options="opt.name for opt in ageOpts.options"></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Cardiac</div>
+            <select ng-model="cardiac" ng-init="cardiac = cardiacOpts.options[0]" ng-options="opt.name for opt in cardiacOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Respiratory</div>
+            <select ng-model="resp" ng-init="resp = respOpts.options[0]" ng-options="opt.name for opt in respOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">ECG</div>
+            <select ng-model="ecg" ng-init="ecg = ecgOpts.options[0]" ng-options="opt.name for opt in ecgOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Pulse</div>
+            <select ng-model="hr" ng-init="hr = hrOpts.options[2]" ng-options="opt.name for opt in hrOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Systolic BP</div>
+            <select ng-model="sbp" ng-init="sbp = sbpOpts.options[3]" ng-options="opt.name for opt in sbpOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">GCS</div>
+            <select ng-model="gcs" ng-init="gcs = gcsOpts.options[0]" ng-options="opt.name for opt in gcsOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Haemoglobin (g/L)</div>
+            <select ng-model="hb" ng-init="hb = hbOpts.options[3]" ng-options="opt.name for opt in hbOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">White Blood Cells (x 10<sup>12</sup>/L)</div>
+            <select ng-model="wbc" ng-init="wbc = wbcOpts.options[2]" ng-options="opt.name for opt in wbcOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Urea (mmol/L)</div>
+            <select ng-model="ur" ng-init="ur = urOpts.options[0]" ng-options="opt.name for opt in urOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Sodium (mmol/L)</div>
+            <select ng-model="na" ng-init="na = naOpts.options[0]" ng-options="opt.name for opt in naOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Potassium (mmol/L)</div>
+            <select ng-model="k" ng-init="k = kOpts.options[3]" ng-options="opt.name for opt in kOpts.options" ></select>
+          </label>
+          <div class="item item-divider">Operative Factors</div>
+          <label class="item item-input item-select">
+            <div class="input-label">Operation Severity</div>
+            <select ng-model="sev" ng-init="sev = sevOpts.options[0]" ng-options="opt.name for opt in sevOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Number of Procedures</div>
+            <select ng-model="procs" ng-init="procs = procsOpts.options[0]" ng-options="opt.name for opt in procsOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Blood Loss (mL)</div>
+            <select ng-model="bld" ng-init="bld = bldOpts.options[0]" ng-options="opt.name for opt in bldOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Peritoneal Soiling</div>
+            <select ng-model="soil" ng-init="soil = soilOpts.options[0]" ng-options="opt.name for opt in soilOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Malignancy</div>
+            <select ng-model="malig" ng-init="malig = maligOpts.options[0]" ng-options="opt.name for opt in maligOpts.options" ></select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">Urgency</div>
+            <select ng-model="urg" ng-init="urg = urgOpts.options[0]" ng-options="opt.name for opt in urgOpts.options" ></select>
+          </label>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
