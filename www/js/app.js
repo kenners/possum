@@ -23,7 +23,7 @@ angular.module('Possum', ['ionic'])
   });
 })
 
-.controller('PossumCtrl', [ '$scope', function($scope) {
+.controller('PossumCtrl', function($scope, $ionicModal) {
   BigNumber.config({ROUNDING_MODE: BigNumber.ROUND_HALF_UP})
 
   $scope.mortality = function(physScore, opScore) {
@@ -336,4 +336,23 @@ angular.module('Possum', ['ionic'])
     ]
   };
 
-}])
+  $ionicModal.fromTemplateUrl('about-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal
+  })
+
+  $scope.openModal = function() {
+    $scope.modal.show()
+  };
+
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+
+})

@@ -110,6 +110,24 @@
             <select ng-model="urg" ng-init="urg = urgOpts.options[0]" ng-options="opt.name for opt in urgOpts.options" ></select>
           </label>
         </div>
+        <div class="row"><div class="col subdued" style="text-align: center;" ng-click="openModal()">About</div></div>
+        <script id="about-modal.html" type="text/ng-template">
+          <div class="modal">
+            <ion-header-bar class="bar-assertive">
+              <h1 class="title">About Possum</h1>
+              <button class="button button-icon icon ion-close" ng-click="closeModal()"></button>
+            </ion-header-bar>
+            <ion-content>
+              <div class="row">
+                <div class="col">
+                  <p>Possum calculates the Portsmouth Physiological and Operative Severity Score for the enUmeration of Mortality and morbidity (P-POSSUM) score for general surgical patients, using the algorithm described by Prytherch et al (doi:10.1046/j.1365-2168.1998.00840.x.).</p>
+                  <p>Possum was developed by Kenrick Turner, an NHS doctor based in the UK.</p>
+                  <a href="mailto:hello@kenners.org?subject=Possum Feedback" class="button button-outline button-block button-positive">Report an issue</a>
+                </div>
+              </div>
+            </ion-content>
+          </div>
+        </script>
       </ion-content>
     </ion-pane>
   </body>
