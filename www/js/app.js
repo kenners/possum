@@ -47,6 +47,8 @@ angular.module('Possum', ['ionic'])
     return sev.value + procs.value + bld.value + soil.value + malig.value + urg.value;
   };
 
+  $scope.age = 1;
+
   $scope.ageOpts = {
     name: 'Age',
     options: [{

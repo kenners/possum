@@ -5,7 +5,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
 
@@ -22,18 +21,13 @@
   <body ng-app="Possum" ng-controller="PossumCtrl">
 
     <ion-pane>
-      <ion-header-bar class="bar-assertive">
+      <div class="bar bar-header bar-assertive">
         <h1 class="title">P-POSSUM</h1>
-      </ion-header-bar>
-      <ion-content>
-        <div class="card row-center">
-          <div class="item item-divider item-assertive text-center">
-            Predicted Mortality
-          </div>
-          <div class="item item-text-wrap text-center">
-            <h1>{{mortality(physScore(age, cardiac, resp, ecg, hr, sbp, gcs, hb, wbc, ur, na, k), opScore(sev, procs, bld, soil, malig, urg))}} <small>%</small></h1>
-          </div>
-        </div>
+      </div>
+      <div class="bar bar-subheader">
+        <h1 class="title mortality">{{mortality(physScore(age, cardiac, resp, ecg, hr, sbp, gcs, hb, wbc, ur, na, k), opScore(sev, procs, bld, soil, malig, urg))}} <small>%</small></h2>
+      </div>
+      <ion-content class="has-header has-subheader">
         <div class="list">
           <div class="item item-divider">Physiological Factors</div>
           <label class="item item-input item-select">

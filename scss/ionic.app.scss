@@ -19,5 +19,8 @@ $dark:                            #444 !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 $assertive:                       #ff7c00;
+
+$bar-subheader-height: 80px;
+
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
