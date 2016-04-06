@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="org.kenners.possum" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="org.kenners.possum" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Possum</name>
   <description>Calculate perioperative mortality for general surgical patients with P-POSSUM. Implements the Portsmouth Physiological and Operative Severity Score for the enUmeration of Mortality and morbidity (P-POSSUM) algorithm described by Prytherch et al. (http://dx.doi.org/10.1046/j.1365-2168.1998.00840.x). Intended for use by qualified medical professionals only.</description>
   <author email="hello@kenners.org" href="https://kenners.org/">
