@@ -18,9 +18,30 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
-$assertive:                       #ff7c00;
+$assertive:                       #ff7c00 !default;
 
 $bar-subheader-height: 80px;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+
+.mortality {
+  border-bottom-color: $stable;
+  border-bottom-width: thin;
+  border-bottom-style: groove;
+}
+
+.button-wrap {
+  font-size: 14px;
+  display: flex !important;
+  align-items: center !important;
+  line-height: $line-height-computed;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
+
+.divi {
+  color: #444;
+  background-color: rgba($assertive, 0.3);
+}
