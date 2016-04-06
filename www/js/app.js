@@ -23,7 +23,7 @@ angular.module('Possum', ['ionic', 'ngSanitize'])
   });
 })
 
-.controller('PossumCtrl', function($scope, $http, $ionicModal) {
+.controller('PossumCtrl', function($scope, $http, $ionicModal, $ionicPopover) {
   BigNumber.config({ROUNDING_MODE: BigNumber.ROUND_HALF_UP})
 
   // Load data
@@ -135,6 +135,44 @@ angular.module('Possum', ['ionic', 'ngSanitize'])
 
   $scope.$on('$destroy', function() {
     $scope.personModal.remove();
+  });
+
+  $ionicModal.fromTemplateUrl('urgency-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.urgencyModal = modal
+  })
+
+  $scope.openUrgencyModal = function() {
+    $scope.urgencyModal.show()
+  };
+
+  $scope.closeUrgencyModal = function() {
+    $scope.urgencyModal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.urgencyModal.remove();
+  });
+
+  $ionicModal.fromTemplateUrl('severity-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.severityModal = modal
+  })
+
+  $scope.openSeverityModal = function() {
+    $scope.severityModal.show()
+  };
+
+  $scope.closeSeverityModal = function() {
+    $scope.severityModal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.severityModal.remove();
   });
 
 })

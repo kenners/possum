@@ -9750,6 +9750,5 @@ a.button {
   white-space: normal !important;
   word-wrap: break-word !important; }
 
-.divi {
-  color: #444;
-  background-color: rgba(255, 124, 0, 0.3); }
+.info-icon {
+  font-size: 24px !important; }

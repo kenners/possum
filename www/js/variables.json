@@ -233,7 +233,7 @@
       "name": "Complex Major",
       "value": 8
     }],
-    "info": "<p>Examples of operation severity:</p><p><strong>Moderate:</strong> appendicectomy, cholecystectomy, mastectomy, TURP.</p><p><strong>Major</strong>: Any laparotomy, bowel resection, cholecystectomy with choledochotomy, peripheral vascular procedure or major amputation.</p><p><strong>Complex Major:</strong> any aortic procedure, AP resection, pancreatic or liver resection, oesophagogastrectomy.</p>"
+    "info": "<p>Examples of operation severity include:</p><p><strong>Moderate:</strong> appendicectomy, cholecystectomy, mastectomy, TURP.</p><p><strong>Major</strong>: Any laparotomy, bowel resection, cholecystectomy with choledochotomy, peripheral vascular procedure or major amputation.</p><p><strong>Complex Major:</strong> any aortic procedure, AP resection, pancreatic or liver resection, oesophagogastrectomy.</p>"
   },
   "procs": {
     "name": "Number of Procedures",
@@ -305,8 +305,9 @@
       "name": "Urgent",
       "value": 4
     }, {
-      "name": "Emergency",
+      "name": "Immediate",
       "value": 8
-    }]
+    }],
+    "info": "<p>The NCEPOD Classification of Intervention defines the following terms:</p><h3>Immediate</h3><p>Immediate life, limb or organ-saving intervention – resuscitation simultaneous with intervention. Normally within minutes of decision to operate.</p><h3>Urgent</h3><p>Intervention for acute onset or clinical deterioration of potentially life-threatening conditions, for those conditions that may threaten the survival of limb or organ, for fixation of many fractures and for relief of pain or other distressing symptoms. Normally within hours of decision to operate.</p><h3>Elective</h3><p>Intervention planned or booked in advance of routine admission to hospital. Timing to suit patient, hospital and staff.</p>"
   }
 }

@@ -30,42 +30,42 @@
       </div>
       <ion-content class="has-header has-subheader">
         <div class="list">
-          <div class="item item-item-darkder item-dark">Age</div>
-          <ion-radio ng-model="data.phys.age" ng-repeat="opt in var.age.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Cardiac</div>
-          <ion-radio ng-model="data.phys.cardiac" ng-repeat="opt in var.cardiac.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Respiratory</div>
-          <ion-radio ng-model="data.phys.resp" ng-repeat="opt in var.resp.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Heart Rate</div>
-          <ion-radio ng-model="data.phys.hr" ng-repeat="opt in var.hr.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Systolic BP</div>
-          <ion-radio ng-model="data.phys.sbp" ng-repeat="opt in var.sbp.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">ECG</div>
-          <ion-radio ng-model="data.phys.ecg" ng-repeat="opt in var.ecg.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">GCS</div>
-          <ion-radio ng-model="data.phys.gcs" ng-repeat="opt in var.gcs.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Haemoglobin <small>(g/L)</small></div>
-          <ion-radio ng-model="data.phys.hb" ng-repeat="opt in var.hb.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">White Blood Cells <small>(x 10<sup>12</sup>/L)</small></div>
-          <ion-radio ng-model="data.phys.wbc" ng-repeat="opt in var.wbc.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Urea <small>(mmol/L)</small></div>
-          <ion-radio ng-model="data.phys.ur" ng-repeat="opt in var.ur.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Sodium <small>(mmol/L)</small></div>
-          <ion-radio ng-model="data.phys.na" ng-repeat="opt in var.na.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Potassium <small>(mmol/L)</small></div>
-          <ion-radio ng-model="data.phys.k" ng-repeat="opt in var.k.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Operation Urgency</div>
-          <ion-radio ng-model="data.op.urg" ng-repeat="opt in var.urg.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Operation Severity</div>
-          <ion-radio ng-model="data.op.sev" ng-repeat="opt in var.sev.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Number of Procedures</div>
-          <ion-radio ng-model="data.op.procs" ng-repeat="opt in var.procs.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Predicted Blood Loss <small>(mL)</small></div>
-          <ion-radio ng-model="data.op.bld" ng-repeat="opt in var.bld.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Peritoneal Soiling</div>
-          <ion-radio ng-model="data.op.soil" ng-repeat="opt in var.soil.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
-          <div class="item item-item-darkder item-dark">Malignancy</div>
-          <ion-radio ng-model="data.op.malig" ng-repeat="opt in var.malig.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Age</div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.age" ng-repeat="opt in var.age.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Cardiac</div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.cardiac" ng-repeat="opt in var.cardiac.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Respiratory</div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.resp" ng-repeat="opt in var.resp.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Heart Rate</div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.hr" ng-repeat="opt in var.hr.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Systolic BP</div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.sbp" ng-repeat="opt in var.sbp.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">ECG</div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.ecg" ng-repeat="opt in var.ecg.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">GCS</div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.gcs" ng-repeat="opt in var.gcs.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Haemoglobin <small>(g/L)</small></div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.hb" ng-repeat="opt in var.hb.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">White Blood Cells <small>(x 10<sup>12</sup>/L)</small></div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.wbc" ng-repeat="opt in var.wbc.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Urea <small>(mmol/L)</small></div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.ur" ng-repeat="opt in var.ur.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Sodium <small>(mmol/L)</small></div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.na" ng-repeat="opt in var.na.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Potassium <small>(mmol/L)</small></div>
+          <ion-radio class="item-text-wrap" ng-model="data.phys.k" ng-repeat="opt in var.k.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark item-icon-right">Operation Urgency <i class="icon ion-information-circled info-icon" ng-click="openUrgencyModal()"></i></div>
+          <ion-radio class="item-text-wrap" ng-model="data.op.urg" ng-repeat="opt in var.urg.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark item-icon-right">Operation Severity <i class="icon ion-information-circled info-icon" ng-click="openSeverityModal()"></i></div>
+          <ion-radio class="item-text-wrap" ng-model="data.op.sev" ng-repeat="opt in var.sev.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Number of Procedures</div>
+          <ion-radio class="item-text-wrap" ng-model="data.op.procs" ng-repeat="opt in var.procs.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Predicted Blood Loss <small>(mL)</small></div>
+          <ion-radio class="item-text-wrap" ng-model="data.op.bld" ng-repeat="opt in var.bld.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Peritoneal Soiling</div>
+          <ion-radio class="item-text-wrap" ng-model="data.op.soil" ng-repeat="opt in var.soil.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
+          <div class="item item-divider item-dark">Malignancy</div>
+          <ion-radio class="item-text-wrap" ng-model="data.op.malig" ng-repeat="opt in var.malig.options" ng-value="opt" name="{{opt.name}}">{{opt.name}}</ion-radio>
         </div>
         <div class="row"><div class="col subdued" style="text-align: center;" ng-click="openModal()">About</div></div>
         <script id="about-modal.html" type="text/ng-template">
@@ -88,12 +88,41 @@
         <script id="person-modal.html" type="text/ng-template">
           <div class="modal">
             <ion-header-bar class="bar-assertive">
-              <h1 class="title">Predicted Mortality Visualisation</h1>
+              <h1 class="title">Predicted Mortality</h1>
               <button class="button button-icon icon ion-close" ng-click="closePersonModal()"></button>
             </ion-header-bar>
             <ion-content>
+              <div class="text-center" ng-bind-html="prettyMortality()"></div>
               <div class="row">
-                <div class="col" style="text-align: center; font-size: xx-large;" ng-bind-html="visualRisk(10.3)">
+                <div class="col" style="text-align: center; font-size: xx-large;" ng-bind-html="visualRisk()">
+                </div>
+              </div>
+            </ion-content>
+          </div>
+        </script>
+        <script id="urgency-modal.html" type="text/ng-template">
+          <div class="modal">
+            <ion-header-bar class="bar-assertive">
+              <h1 class="title">Operation Urgency</h1>
+              <button class="button button-icon icon ion-close" ng-click="closeUrgencyModal()"></button>
+            </ion-header-bar>
+            <ion-content>
+              <div class="row">
+                <div class="col" ng-bind-html="var.urg.info">
+                </div>
+              </div>
+            </ion-content>
+          </div>
+        </script>
+        <script id="severity-modal.html" type="text/ng-template">
+          <div class="modal">
+            <ion-header-bar class="bar-assertive">
+              <h1 class="title">Operation Severity</h1>
+              <button class="button button-icon icon ion-close" ng-click="closeSeverityModal()"></button>
+            </ion-header-bar>
+            <ion-content>
+              <div class="row">
+                <div class="col" ng-bind-html="var.sev.info">
                 </div>
               </div>
             </ion-content>
