@@ -37,21 +37,50 @@ angular.module('Possum', ['ionic', 'ngSanitize'])
   };
 
   $scope.mortality = function() {
+    // Ln R/1-R = -9.065 + (0.1692 x physiological score) + (0.1550 x operative severity score)
+    var k = new BigNumber('-9.065');
+    var physK = new BigNumber('0.1692');
+    var phys = new BigNumber($scope.scoreSum().phys);
+    var opK = new BigNumber('0.1550');
+    var op = new BigNumber($scope.scoreSum().op);
+    var score = k.plus(physK.times(phys)).plus(opK.times(op));
+    var hundred = new BigNumber('100');
+    var mort = (Math.exp(score) / (Math.exp(score) + 1) * hundred);
+    return mort.toFixed(1);
+  };
+
+  $scope.prettyMortality = function() {
     // Check whether we've got complete data
     if (Object.keys($scope.data.phys).length < 12 || Object.keys($scope.data.op).length < 6) {
       return '<h1><i class="icon ion-more"></i></h1>';
     } else {
-      // Ln R/1-R = -9.065 + (0.1692 x physiological score) + (0.1550 x operative severity score)
-      var k = new BigNumber('-9.065');
-      var physK = new BigNumber('0.1692');
-      var phys = new BigNumber($scope.scoreSum().phys);
-      var opK = new BigNumber('0.1550');
-      var op = new BigNumber($scope.scoreSum().op);
-      var score = k.plus(physK.times(phys)).plus(opK.times(op));
-      var hundred = new BigNumber('100');
-      var mort = (Math.exp(score) / (Math.exp(score) + 1) * hundred);
-      return '<h1>' + mort.toFixed(1) + ' <small>%</small></h1>';
+      return '<h1>' + $scope.mortality() + ' <small>%</small></h1>';
     }
+  };
+
+  $scope.visualRisk = function() {
+    var mort = 100 - Math.round($scope.mortality());
+    console.log(mort);
+    var output = '';
+    var i;
+    var j;
+    var k = 0;
+    var iconAlive = '<div class="col"><i class="icon ion-ios-body alive"></i></div>';
+    var iconDead = '<div class="col"><i class="icon ion-ios-body dead"></i></div>';
+    for (i = 0; i < 10; i++) {
+      var row = '<div class="row">';
+      for (j = 0; j < 10; j++) {
+        if (k < mort) {
+          row += iconAlive;
+        } else {
+          row += iconDead;
+        }
+        k++
+      }
+      row += '</div>';
+      output += row;
+    }
+    return output;
   };
 
   $scope.scoreSum = function() {
@@ -87,6 +116,25 @@ angular.module('Possum', ['ionic', 'ngSanitize'])
 
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
+  });
+
+  $ionicModal.fromTemplateUrl('person-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.personModal = modal
+  })
+
+  $scope.openPersonModal = function() {
+    $scope.personModal.show()
+  };
+
+  $scope.closePersonModal = function() {
+    $scope.personModal.hide();
+  };
+
+  $scope.$on('$destroy', function() {
+    $scope.personModal.remove();
   });
 
 })

@@ -23,9 +23,10 @@
     <ion-pane>
       <div class="bar bar-header bar-assertive">
         <h1 class="title">P-POSSUM Mortality</h1>
+        <button class="button button-clear icon-left ion-ios-body" ng-click="openPersonModal()"></button>
       </div>
       <div class="bar bar-subheader mortality light-bg">
-        <div class="text-center padding-top" ng-bind-html="mortality()"></div>
+        <div class="text-center padding-top" ng-bind-html="prettyMortality()"></div>
       </div>
       <ion-content class="has-header has-subheader">
         <div class="list">
@@ -79,6 +80,20 @@
                   <p>Possum calculates the Portsmouth Physiological and Operative Severity Score for the enUmeration of Mortality and morbidity (P-POSSUM) score for general surgical patients, using the algorithm described by Prytherch et al (doi:10.1046/j.1365-2168.1998.00840.x.).</p>
                   <p>Possum was developed by Kenrick Turner, an NHS doctor based in the UK.</p>
                   <a href="mailto:hello@kenners.org?subject=Possum Feedback" class="button button-outline button-block button-assertive">Report an issue</a>
+                </div>
+              </div>
+            </ion-content>
+          </div>
+        </script>
+        <script id="person-modal.html" type="text/ng-template">
+          <div class="modal">
+            <ion-header-bar class="bar-assertive">
+              <h1 class="title">Predicted Mortality Visualisation</h1>
+              <button class="button button-icon icon ion-close" ng-click="closePersonModal()"></button>
+            </ion-header-bar>
+            <ion-content>
+              <div class="row">
+                <div class="col" style="text-align: center; font-size: xx-large;" ng-bind-html="visualRisk(10.3)">
                 </div>
               </div>
             </ion-content>

@@ -32,6 +32,14 @@ $bar-subheader-height: 80px;
   border-bottom-style: groove;
 }
 
+.alive {
+  color: $balanced;
+}
+
+.dead {
+  color: #ef473a;
+}
+
 .button-wrap {
   font-size: 14px;
   display: flex !important;

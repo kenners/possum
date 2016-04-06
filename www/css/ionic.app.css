@@ -9736,6 +9736,12 @@ a.button {
   border-bottom-width: thin;
   border-bottom-style: groove; }
 
+.alive {
+  color: #33cd5f; }
+
+.dead {
+  color: #ef473a; }
+
 .button-wrap {
   font-size: 14px;
   display: flex !important;
