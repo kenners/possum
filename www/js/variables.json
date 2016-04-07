@@ -233,7 +233,7 @@
       "name": "Complex Major",
       "value": 8
     }],
-    "info": "<p>Examples of operation severity include:</p><p><strong>Moderate:</strong> appendicectomy, cholecystectomy, mastectomy, TURP.</p><p><strong>Major</strong>: Any laparotomy, bowel resection, cholecystectomy with choledochotomy, peripheral vascular procedure or major amputation.</p><p><strong>Complex Major:</strong> any aortic procedure, AP resection, pancreatic or liver resection, oesophagogastrectomy.</p>"
+    "info": "<p>Examples of operation severity include:</p><h3>Moderate</h3><p>Appendicectomy, cholecystectomy, mastectomy, and TURP.</p><h3>Major</h3><p>Any laparotomy, bowel resection, cholecystectomy with choledochotomy, and peripheral vascular procedure or major amputation.</p><h3>Complex Major</h3><p>Any aortic procedure, AP resection, pancreatic or liver resection, and oesophagogastrectomy.</p>"
   },
   "procs": {
     "name": "Number of Procedures",
